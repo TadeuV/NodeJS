@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+@import url("../node_modules/font-awesome/css/font-awesome.css");
+@import url("../node_modules/font-awesome/css/font-awesome.css.map");
+
+
+body{
+    font-family: 'Muli', sans-serif;
+    /* border: 2px solid red; */
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(48, 52, 53);
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+h1{
+    font-size: 3.9rem;
+    color: white;
+}
+
+.totalwrapper{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    font-size: 1.6rem;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+.statsbar{
+    display: flex;
+    height: 80px;
+    align-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    background-color: rgb(48, 52, 53);
+    justify-content: space-between;
+}
+
+.buttonwrapper{
+    box-sizing: border-box;
+    width:25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white; */
+}
+
+.add:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px rgb(120, 153, 110);
+    transform: translateY(4px);
+  }
+.add:hover{
+    background-color: white;
+    color: rgb(26, 155, 43);
+}
+.add{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(52, 141, 64);
+    color: white;
+}
+table{
+    width: 80vw;
+    border: 2px gray double;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: white;
+}
+th{
+    border: 1px gray solid;
+    background-color: rgb(35, 43, 114);
+    color: white;
+    font-size: 1.3rem;
+    height: 50px;
+}
+td{
+    border: 1px gray solid;
+}
+tr:nth-child(even){
+    background-color: rgb(220, 230, 245);
+}
+
+.logout{
+    background-color: brown;
+    font-size: 1rem;
+    text-decoration: none;
+    color:white;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

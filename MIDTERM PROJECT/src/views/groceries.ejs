@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="@icon/font-awesome-solid/font-awesome-solid.css">
+    <link rel="stylesheet" href="/groceries.css">
+    <title>Groceries List</title>
+</head>
+<body>
+    <h1>Grocery List </h1>
+    <div class="painel">
+        <div class="statsbar">
+            <div class="totalwrapper">
+                <div class="total">Total of items: <%= model.length %> </div>
+                <div >Total Quantity: <%= totQuant %> </div>
+            </div><br>
+            <div class="buttonwrapper">
+                <a class="add" href="/groceries/insert">Add Item</a>
+                <a class="logout" href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="tablecontainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item</th>
+                        <th>Brand</th>
+                        <th>Quantity</th>
+                        <th>Observation</th>
+                        <th>Check</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const Groceries of model) { %>
+                        <tr>
+                            <td><%= Groceries.Item_ID %></td>
+                            <td><%= Groceries.Item_name %></td>
+                            <td><%= Groceries.Brand %></td>
+                            <td><%= Groceries.Quantity %></td>
+                            <td><%= Groceries.Comment %></td>
+                            <td><input class="check" type="radio"></td>
+                            <td><a href="/groceries/edit/<%= Groceries.Item_ID %>"><i class="fa-solid fa-pencil"></i>!</a></td>
+                            <td>
+                                <form action="/groceries/delete/<%= Groceries.Item_ID %>?_method=DELETE" method="post" style="display: inline-block;">
+                                    <input type="submit" value="Delete"><i class="fa-solid fa-trash-xmark" value="delete"></i></input>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

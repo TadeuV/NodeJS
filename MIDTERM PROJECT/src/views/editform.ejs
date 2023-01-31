@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/insert.css">
+    <title>Edit Form</title>
+</head>
+<body>
+    <form action="/groceries/edit/<%= model.Item_ID %>" method="post">
+        <h2> Editing item  <%= model.Item_ID %></h2>
+        <%- include("_edit") -%>
+    
+        <div id="outer">
+            <input class="button" type="submit" value="Update"></input>
+        </div>
+    </form>
+</body>
+</html>
